@@ -1,5 +1,5 @@
 import React from 'react';
-import useAboutPage from '../../views/AdminDashboard/useAboutPage';
+import useAboutPage from './useAboutPage';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
@@ -12,7 +12,10 @@ const AboutUpdateForm = () => {
         <div className='border-primary border p-4 m-3'>
             <h2>Update or Delete Sections on About Page</h2>
             {
+                //retrieving each section represented by an object in a JSON file
                 inputs.data.map((divs, index) => {
+                    //if it is a section object display a way to edit the Title of section and the text of the section along with option to delete or update the section
+                    //else it will decide it is at the last section the employee info card section and try to display the information based on that
                     if (divs.type === "section") {
                         return (
                             <Form className='border-primary border p-4 m-3' key={divs.type + index}>
@@ -37,6 +40,8 @@ const AboutUpdateForm = () => {
                             </Form>
                         )
                     } else {
+                        //return a form that will allow the user to edit the title of the Info Card section and edit each info card in this section (changing the name and information
+                        //of the employee)
                         return (
                             <div className='border-primary border p-4 m-3' key={index}>
                                 <h2>Update or Delete Employees</h2>
@@ -78,6 +83,9 @@ const AboutUpdateForm = () => {
                 })
             }
             <div className='border-primary border p-4 m-3'>
+                {
+                    //form to allow for the addition of new text sections
+                }
                 <h2>Add new section</h2>
                 <Form onSubmit={handleSubmit} className='border-primary border p-4 m-3'>
                     <Form.Label column=''>Section Title:</Form.Label>
@@ -94,6 +102,9 @@ const AboutUpdateForm = () => {
                 </Form>
             </div>
             <div className='border-primary border p-4 m-3'>
+                {
+                    //form to allow for the addition of new employees to the info card section
+                }
                 <h2>Add new employee</h2>
                 <Form onSubmit={handleSubmit} className='border-primary border p-4 m-3'>
                     <Form.Label>Employee information:</Form.Label>

@@ -1,7 +1,4 @@
 import React from "react"
-import Standard from "../../components/Product/Standard";
-import AA_ME from "../../components/Product/AA_ME";
-import SS from "../../components/Product/SS";
 import NavBar from "../../components/Header/NavBar";
 import navItems from "../../utils/navItems";
 import data from "../../data/ProductPage"
@@ -16,7 +13,7 @@ function ProductPage() {
             </div>
             {
                 data.data.map(stuff=>{
-                    
+                    //if the content type is info will deplay a product info sections else it will display the external link section
                     if(stuff.type==="info"){
                         console.log(stuff.text);
                         return(
@@ -24,7 +21,9 @@ function ProductPage() {
                             <div data-aos='fade-right' data-aos-duration="1000" className='standard' id='productpage'>
                                 <h1>{stuff.name}</h1>
                                 <p>
-                                    {stuff.text.split("\n").map((i,key)=>{
+                                    {
+                                    //this will separate out the paragraph based on newlines and put the sections in new lines
+                                    stuff.text.split("\n").map((i,key)=>{
                                         return <div key={key}>{i}</div>
                                     })}
                                 </p>

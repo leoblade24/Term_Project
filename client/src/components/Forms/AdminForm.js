@@ -1,9 +1,9 @@
-import React, {useState, useEffect, memo, useCallback} from 'react';
+import React, {useState, useEffect, memo} from 'react';
 import axios from 'axios';
 import {Button, Modal, Form} from 'react-bootstrap';
 import isEmpty from 'is-empty';
 import Validator from 'validator';
-import * as jwt from "jsonwebtoken";
+//import * as jwt from "jsonwebtoken";
 
 const AdminForm = (props) => {
 

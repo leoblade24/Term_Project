@@ -12,7 +12,10 @@ const UpdateProductForm = () => {
         <div className='border-primary border p-4 m-3'>
             <h2>Update or Delete Sections on Product Page</h2>
             {
+                //will use each object in data to decide which form is created
                 inputs.data.map((stuff, index) => {
+                    //if the section type is info will return form where they can edit the Title and the Text of the section about a product; they can also delete the section
+                    //else it displays a form where they can change the link to the external ordering and update the test of the ordering section.
                     if (stuff.type === "info") {
                         return (
                             <Form className='border-primary border p-4 m-3' key={stuff + index}>
@@ -60,6 +63,9 @@ const UpdateProductForm = () => {
                 })
             }
             <div className='border-primary border p-4 m-3'>
+                {
+                    //allowing for the creation of a new Product section
+                }
                 <h2>Add new section</h2>
                 <Form onSubmit={handleSubmit}>
                     <Form.Label column=''>Section Title:</Form.Label>

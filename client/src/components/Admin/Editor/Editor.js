@@ -5,7 +5,7 @@ import UpdateAboutForm from "../../About/UpdateAboutForm"
 import UpdateProductForm from "../../Product/UpdateProductForm"
 import UpdateFooterForm from "../../Footer/UpdateFooterForm"
 import UpdatePDFS from "../../PDFViewer/UpdatePDFS"
-import {HashLink as Link} from 'react-router-hash-link'
+
 
 const Editor = () => {
     
@@ -29,7 +29,9 @@ const Editor = () => {
                 <div className="column left col-lg-2 col-sm-8 col-md-4">
                     <div className="vertical-menu sticky-top" style={{top: '10%'}}>
 
-                       
+                       {
+                           //options for the menu to be able to select with page's editing form appears to the user
+                       }
                        <a onClick={() => {setHome(true); setAbout(false); setProduct(false); setFooter(false); setPDFs(false)}}
                         href="/dashboard#Home">
                             Home
@@ -58,35 +60,45 @@ const Editor = () => {
                 </div>
 
                 <div className="column right col-lg-10 col-sm-5 col-md-8 pl-5">
-                    {home ?
+                    {
+                    //will display the form to edit the home page
+                    home ?
                         <div data-aos="fade-up" data-aos-duration='1000'>
                             <HomeForm/>
                         </div> 
                         : null
                     }
 
-                    {about ?
+                    {
+                    //will display the form to edit the about page
+                    about ?
                         <div data-aos="fade-up" data-aos-duration='1000'>
                             <UpdateAboutForm/>
                         </div> 
                         : null
                     }
 
-                    {product ?
+                    {
+                    //will display the form to edit the product page
+                    product ?
                         <div data-aos="fade-up" data-aos-duration='1000'>
                             <UpdateProductForm/>
                         </div> 
                         : null
                     }
 
-                    {footer ?
+                    {
+                    //will display the form to edit the footer
+                    footer ?
                         <div data-aos="fade-up" data-aos-duration='1000'>
                             <UpdateFooterForm/>
                         </div> 
                         : null
                     }
 
-                    {pdfs ?
+                    {
+                    //will display the form to edit the whitepages/documents page
+                    pdfs ?
                         <div data-aos="fade-up" data-aos-duration='1000'>
                             <UpdatePDFS/>
                         </div> 

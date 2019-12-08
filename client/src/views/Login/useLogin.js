@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import axios from 'axios';
 import jwt from 'jsonwebtoken'
 
@@ -9,9 +9,11 @@ const useLogin = () => {
 
     const setAuthToken = token => {
         if (token) {
-            // apply auth token to each request if logged in
+            
             setAuthenticated(true);
+            //storing the authorization in local storage
             localStorage.setItem("isAuth", true);
+            // apply auth token to each request if logged in
             axios.defaults.headers.common['Authorization'] = token;
         } else {
             // delete auth header
@@ -44,6 +46,7 @@ const useLogin = () => {
         //inputs.password="";
     };
     const returnAuth=()=>{
+        //used to retrieve the value of isAuthenticated
         if(isAuthenticated===true){
             return true;
         }
@@ -51,7 +54,7 @@ const useLogin = () => {
             return false;
         }
     };
-
+    
     const logout = () => {
         // remove token from local storage
         localStorage.removeItem("jwtToken");
@@ -63,6 +66,7 @@ const useLogin = () => {
     };
 
     const handleInputChange = (event) => {
+        //updating the value inputs (either email or password)
         event.persist();
         setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
     };

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import  {useState} from 'react'
 
 const useAdminPanel = () => {
     const [inputs, setInputs] = useState({});

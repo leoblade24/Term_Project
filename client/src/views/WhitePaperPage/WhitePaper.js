@@ -9,12 +9,15 @@ const WhitePaper = () => {
     var pdfViewers = []; 
     for (var key in data) {
         for (var i in data[key]) {
-            console.log(data[key][i]);
-            console.log(key);
-            console.log(i);
-            console.log(data[key][i].file);
+            //console.log(data[key][i]);
+            //console.log(key);
+            //console.log(i);
+            //console.log(data[key][i].file);
             pdfViewers.push(              
                 <div className={data[key][i].id + "-page"} id={data[key][i].id}>
+                    {
+                        //displaying a PDF file using the file name stored in a JSON file
+                    }
                 <PDFViewer file={data[key][i].file}/>
                 </div>
             );
