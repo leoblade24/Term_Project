@@ -18,6 +18,9 @@ const ProductsInfo = () => {
             <div>
                 <h2>Preview</h2>
                 <div className='position-relative'>
+                    {
+                        //displaying a single pdf for a preview
+                    }
                     <PDFViewer file={data[getKey][0].file}/>
                 </div>
                 <div className='border border-info'>
@@ -25,6 +28,9 @@ const ProductsInfo = () => {
                         For more Information:
                     </p>
                     <p>
+                        {
+                            //Linking to the documents page
+                        }
                         <Link to="/whitepages">See All Documents</Link>
                     </p>
                 </div>

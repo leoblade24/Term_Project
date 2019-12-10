@@ -9,6 +9,7 @@ const FooterUpdate = () => {
         <div className='border-primary border p-4 m-3'>
             <h2>Update Footer Sections</h2>
             {
+                //allowing for the editing of either the left or right hand sides of the footers
                 <Form className='border-primary border p-4 m-3'>
                 <Form.Label column=''>Name of Left Hand Footer:</Form.Label>
                 <Form.Control type="text"

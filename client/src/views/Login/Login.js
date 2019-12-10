@@ -3,11 +3,13 @@ import useLogin from './useLogin';
 import './Login.css';
 const Login = (props) => {
     console.log(props);
-    const {inputs, user, isAuthenticated, handleInputChange, handleSubmit, returnAuth,setAuthenticated} = useLogin();
+    const {inputs,  handleInputChange, handleSubmit} = useLogin();
+    //getting the authorization from localstorage
     const isAuth=localStorage.getItem("isAuth");
     return (
         <div className='login-container text-center m-auto' style={{transform: 'translateY(-10%)'}}>
             {
+                //if isAuth is true it will redirect to the dashboard else it continue to display the login page
                 isAuth ? props.history.push('/dashboard') : console.log(isAuth)
             }
             <div className='login-form'>

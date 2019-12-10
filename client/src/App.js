@@ -19,6 +19,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const RoutedApp = withRouter(props => <App {...props}/>);
 
 const App = (props) => {
+    //creating a home button to link back to the homepage if the user wanted to return
     const {pathname} = props.location;
     const homeLogo = <Link to={'/home'}>
     <img src='/assets/home.png' className= 'home'
@@ -31,6 +32,9 @@ const App = (props) => {
             <div style={{display: "flex", flexDirection: "row", width: "90%"}} className='m-auto' id='top'>
                 {pathname === '/contact' || pathname === '/dashboard' || pathname === '/login' ? homeLogo : null}
                 <Switch>
+                    {
+                        //setting up the paths for the actual pages we have
+                    }
                     <Route exact path="/home" component={Home}/>
                     <Route exact path="/">
                         <Redirect to="/home"/>
@@ -42,9 +46,15 @@ const App = (props) => {
                     <Route exact path="/contact" component={Contact}/>
                     <Route exact path="/dashboard" component={Dashboard}/>
                     <Route exact path ="/not-found" component={NotFound}/>
+                    {
+                        //all other paths redirect to the page with our page not found message
+                    }
                     <Redirect from='*' to="/not-found" />
                 </Switch>
             </div>
+            {
+                //if the page does not have the address /not-found it will have the footer placed at the bottom
+            }
             {pathname !== '/not-found' ? <Footer/> : null}
         </div>
     );
