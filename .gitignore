@@ -1,7 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/node_modules
+**/node_modules
 /client/node_modules
 /.pnp
 .pnp.js
@@ -12,6 +12,9 @@
 # production
 /build
 client/build
+server/dist
+
+package-lock.json
 
 # misc
 .DS_Store
@@ -54,3 +57,15 @@ yarn-error.log*
 
 # User-specific stuff
 .idea/*
+
+server/dist/
+server/dist/*
+server/.env
+**/server/dist/
+./server/dist
+./server/dist/**
+./server/dist/*
+dist/
+dist/*
+
+
