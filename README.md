@@ -1,7 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 This project contains an example project board meant to showcase how one can be used. The issues posted to it are not real issues.
 
-Nick's Fork:
+# Credits
+The deployed heroku site: https://quiet-shelf-35148.herokuapp.com/
+This project uses: grecaptcha, TypeScript, React-Bootstrap, aos (for page animations), multer, react-responsive-carousel.
+
+### Home page navigation
+![Home](https://i.imgur.com/HRvVcgU.png)
+
+### Email form
+![Email](https://i.imgur.com/TsneIqV.png)
+
+### Login form
+![Login](https://i.imgur.com/FP41Vcc.png)
+
+### Website Editor
+![Website Editor](https://i.imgur.com/zztBF0M.png)
+
+### User Modification
+![User Modification](https://i.imgur.com/EtJ1MeX.png)
+
+### Users
+![Users](https://i.imgur.com/25wAhRw.png)
 
 #### _**IMPORTANT NOTE**_ - 
 This project does not have a mongoDB connection setup. For:
