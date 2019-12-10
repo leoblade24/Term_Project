@@ -81,7 +81,7 @@ Runs just the server in development mode.<br>
 
 
 ### `yarn build`
-> Note you **MUST** execute this in the `client` directory.
+> Note you **MUST** execute this in the `root` directory.
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
